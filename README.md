@@ -8,6 +8,10 @@
 
 <br>
 
+<p align="center">
+  <img alt="projeto árvore de links da Call Up" src=".github/visual-final.png" width="100%">
+</p>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
