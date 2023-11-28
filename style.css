@@ -6,7 +6,7 @@
 
 :root {
   --text-color: #313131;
-  --br-url: url(./Assets/mobile-01.png);
+  --bg-url: url(./Assets/mobile-01.png);
   --hoover: rgba(49, 49, 49, 0.25);
   --bg-links: rgba(255, 255, 255, 0.1);
   --bg-border-links: rgba(49, 49, 49, 0.5);
@@ -18,7 +18,7 @@
 
 .light {
   --text-color: #e1d5bd;
-  --br-url: url(./Assets/mobile-02.png);
+  --bg-url: url(./Assets/mobile-02.png);
   --hoover: rgba(225, 213, 189, 0.25);
   --bg-links: rgba(255, 255, 255, 0.1);
   --bg-border-links: rgba(255, 255, 255, 0.5);
@@ -30,7 +30,8 @@
 
 body {
   /*As informações acima podem ser agrupadas da seguinte forma background: color imagem repeat position/size */
-  background: var(--br-url) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -161,4 +162,15 @@ footer {
   font-weight: 400;
   line-height: 24px;
   color: var (--text-color);
+}
+
+/* mudando css com media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-desktop-light.png);
+  }
+
+  .light {
+    --bg-url: url(./Assets/bg-desktop-darkmode.png);
+  }
 }
