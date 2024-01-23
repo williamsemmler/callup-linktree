@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #313131;
+  --bg-url: url(./Assets/mobile-01.png);
+  --hoover: rgba(49, 49, 49, 0.25);
+  --bg-links: rgba(255, 255, 255, 0.1);
+  --bg-border-links: rgba(49, 49, 49, 0.5);
+  --bg-switch: #e1d5bd;
+  --switch-image: url(./Assets/moon.svg);
+  --switch-border: #313131;
+  --span-bg: rgba(49, 49, 49, 0.15);
+}
+
+.light {
+  --text-color: #e1d5bd;
+  --bg-url: url(./Assets/mobile-02.png);
+  --hoover: rgba(225, 213, 189, 0.25);
+  --bg-links: rgba(255, 255, 255, 0.1);
+  --bg-border-links: rgba(255, 255, 255, 0.5);
+  --bg-switch: #e1d5bd;
+  --switch-image: url(./Assets/sun.svg);
+  --switch-border: #e1d5bd;
+  --span-bg: rgba(225, 213, 189, 0.15);
+}
+
+body {
+  /*As informações acima podem ser agrupadas da seguinte forma background: color imagem repeat position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 580px;
+  margin: 56px auto 0px;
+}
+
+/* Profile */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* Switch */
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-switch) var(--switch-image) no-repeat center;
+  border: 0.5px solid var(--switch-border);
+  border-radius: 50%;
+
+  position: absolute;
+  top: -16%;
+  left: 0;
+  z-index: 1;
+
+  animation: slideout 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--span-bg);
+}
+
+.light #switch button {
+  animation: slidein 0.3s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--switch-border);
+  background: var(--span-bg);
+  border-radius: 9999px;
+}
+
+/* Links da lista */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--bg-links);
+  border: 1px solid var(--bg-border-links);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.5s;
+}
+
+/* pseudo-seletor. hover trata-se do comportamento quando o mouse passa em cima do botão*/
+ul li a:hover {
+  background: var(--hoover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  transition: background 0.5s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--hoover);
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var (--text-color);
+}
+
+/* mudando css com media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-desktop-light.png);
+  }
+
+  .light {
+    --bg-url: url(./Assets/bg-desktop-darkmode.png);
+  }
+}
+
+/* animation */
+@keyframes slidein {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
