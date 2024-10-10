@@ -1,4 +1,8 @@
 function toggleMode() {
+  const modal = document.getElementById("modal")
+  if (modal.classList.contains("exibeModal")) {
+    modal.classList.toggle("exibeModal")
+  }
   const html = document.documentElement
   html.classList.toggle("light")
   // pegar a tag image
@@ -6,15 +10,15 @@ function toggleMode() {
 
   // se tiver dark mode, adicionar a imagem light
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./Assets/avatar-claro-callup.png")
+    img.setAttribute("src", "./Assets/logo/logo-dark.png")
   }
   //se tiver light mode, adicionar a imagem dark
   else {
-    img.setAttribute("src", "./Assets/avatar-escuro-callup.png")
+    img.setAttribute("src", "./Assets/logo/logo-light.png")
   }
 }
 
-// if (html.classList.contains("light")) {
-// html.classList.remove("light")
-// else {
-//  html.classList.add("light")
+function exibeModal() {
+  const modal = document.getElementById("modal")
+  modal.classList.toggle("exibeModal")
+}
