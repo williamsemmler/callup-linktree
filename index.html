@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Up</title>
+    <link rel="stylesheet" href="./style.css" />
 
-    <title>Linktree Call Up</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Link Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./Assets/icons/Logo4.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img
-          src="./Assets/avatar-escuro-callup.png"
-          alt="logo da call up com fundo escuro e símbolo 'c' claro ao centro"
-        />
-        <p>Sua chamada para o sucesso! 🚀</p>
+        <img src="./Assets/logo/logo-light.png" alt="" />
+        <p>
+          O <strong>UP</strong> que sua empresa precisa para
+          <strong>chegar no topo</strong>!
+        </p>
       </div>
 
       <div id="switch" onclick="toggleMode()">
@@ -31,16 +30,6 @@
 
       <ul>
         <li>
-          <a href="#" target="_blank"
-            >Conheça nosso site <em>(em desenvolvimento)</em></a
-          >
-        </li>
-        <li>
-          <a href="#" target="_blank"
-            >Nossos serviços <em>(em desenvolvimento)</em></a
-          >
-        </li>
-        <li>
           <a
             href="https://api.whatsapp.com/send/?phone=5551996648231"
             target="_blank"
@@ -48,11 +37,24 @@
           >
         </li>
         <li>
-          <a
-            href="https://www.instagram.com/callup.agenciadigital/"
-            target="_blank"
+          <a href="https://www.instagram.com/callup.agencia/" target="_blank"
             >Nosso perfil no Instagram</a
           >
+        </li>
+        <li>
+          <a href="#" onclick="exibeModal()">Nossos serviços</a>
+        </li>
+        <div class="modal" id="modal">
+          <ul>
+            <li>Social Media</li>
+            <li>Tráfego Pago</li>
+            <li>Criação e edição de reels e vídeos de alto impacto</li>
+            <li>Criação de websites e landing pages</li>
+            <li>Chatbot para automatização de processos</li>
+          </ul>
+        </div>
+        <li>
+          <a href="#">Conheça nosso site <em>(em desenvolvimento)</em></a>
         </li>
       </ul>
 
@@ -62,9 +64,7 @@
           target="_blank"
           ><ion-icon name="logo-facebook"></ion-icon
         ></a>
-        <a
-          href="https://www.linkedin.com/company/ag%C3%AAncia-call-up/"
-          target="_blank"
+        <a href="https://www.linkedin.com/company/agenciacallup" target="_blank"
           ><ion-icon name="logo-linkedin"></ion-icon
         ></a>
         <a href="https://www.tiktok.com/@agenciacallup" target="_blank"
@@ -76,7 +76,10 @@
       </div>
 
       <footer>
-        Feito com ♥ por <a href="#" target="_blank">Agência Call Up</a>
+        Feito com ♥ por
+        <a href="https://www.instagram.com/callup.agencia/" target="_blank"
+          >Agência Call Up</a
+        >
       </footer>
     </div>
 

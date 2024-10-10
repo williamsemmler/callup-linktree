@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,36 +8,36 @@
 }
 
 :root {
-  --text-color: #313131;
-  --bg-url: url(./Assets/mobile-01.png);
-  --hoover: rgba(49, 49, 49, 0.25);
-  --bg-links: rgba(255, 255, 255, 0.1);
-  --bg-border-links: rgba(49, 49, 49, 0.5);
-  --bg-switch: #e1d5bd;
-  --switch-image: url(./Assets/moon.svg);
-  --switch-border: #313131;
-  --span-bg: rgba(49, 49, 49, 0.15);
+  --text-color: #eaeaea;
+  --bg-url: url(./Assets/backgrounds/bg-dark-mobile.png);
+  --hoover: #3ab795;
+  --bg-links: rgba(255, 255, 255, 0.102);
+  --bg-border-links: rgba(51, 51, 51, 0.502);
+  --bg-switch: #3ab795;
+  --switch-image: url(./Assets/icons/moon.svg);
+  --switch-border: #eaeaea;
+  --span-bg: #3ab795;
 }
 
 .light {
-  --text-color: #e1d5bd;
-  --bg-url: url(./Assets/mobile-02.png);
-  --hoover: rgba(225, 213, 189, 0.25);
-  --bg-links: rgba(255, 255, 255, 0.1);
-  --bg-border-links: rgba(255, 255, 255, 0.5);
-  --bg-switch: #e1d5bd;
-  --switch-image: url(./Assets/sun.svg);
-  --switch-border: #e1d5bd;
-  --span-bg: rgba(225, 213, 189, 0.15);
+  --text-color: #333333;
+  --bg-url: url(./Assets/backgrounds/bg-light-mobile.png);
+  --hoover: #eaeaea;
+  --bg-links: rgba(51, 51, 51, 0.102);
+  --bg-border-links: rgba(51, 51, 51, 0.502);
+  --bg-switch: #eaeaea;
+  --switch-image: url(./Assets/icons/sun.svg);
+  --switch-border: #eaeaea;
+  --span-bg: #eaeaea;
 }
 
 body {
   /*As informações acima podem ser agrupadas da seguinte forma background: color imagem repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
 }
 body * {
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   color: var(--text-color);
 }
 
@@ -98,7 +101,6 @@ body * {
   width: 64px;
   height: 24px;
   border: 1px solid var(--switch-border);
-  background: var(--span-bg);
   border-radius: 9999px;
 }
 
@@ -160,6 +162,18 @@ ul li a:hover {
   background: var(--hoover);
 }
 
+.modal {
+  display: none;
+  border: 1px solid var(--switch-border);
+  border-radius: 10px;
+}
+.modal ul {
+  text-align: center;
+}
+.exibeModal {
+  display: block;
+}
+
 footer {
   text-align: center;
   padding: 24px 0;
@@ -172,11 +186,11 @@ footer {
 /* mudando css com media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./Assets/bg-desktop-light.png);
+    --bg-url: url(./Assets/backgrounds/bg-dark-desktop.png);
   }
 
   .light {
-    --bg-url: url(./Assets/bg-desktop-darkmode.png);
+    --bg-url: url(./Assets/backgrounds/bg-light-desktop.png);
   }
 }
 
